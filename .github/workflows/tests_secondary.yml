@@ -44,7 +44,7 @@ jobs:
     - run: node tests/config/checkCoverage.js ${{ matrix.browser }}
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: always()
       with:
         name: ${{ matrix.browser }}-${{ matrix.os }}-test-results
@@ -71,7 +71,7 @@ jobs:
     - run: npm run test -- --project=${{ matrix.browser }}
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: ${{ matrix.browser }}-${{ matrix.os }}-test-results
@@ -99,7 +99,7 @@ jobs:
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
       shell: bash
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: ${{ matrix.browser }}-win-test-results
@@ -152,7 +152,7 @@ jobs:
         HEADFUL: 1
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: headful-${{ matrix.browser }}-linux-test-results
@@ -182,7 +182,7 @@ jobs:
         PWTEST_MODE: ${{ matrix.mode }}
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: mode-${{ matrix.mode }}-linux-test-results
@@ -209,7 +209,7 @@ jobs:
         PWTEST_CHANNEL: chrome
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: chrome-stable-linux-test-results
@@ -235,7 +235,7 @@ jobs:
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
       shell: bash
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: chrome-stable-win-test-results
@@ -259,7 +259,7 @@ jobs:
         PWTEST_CHANNEL: chrome
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: chrome-stable-mac-test-results
@@ -286,7 +286,7 @@ jobs:
         PWTEST_CHANNEL: firefox-stable
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: firefox-stable-linux-test-results
@@ -313,7 +313,7 @@ jobs:
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
       shell: bash
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: firefox-stable-win-test-results
@@ -337,7 +337,7 @@ jobs:
         PWTEST_CHANNEL: firefox-stable
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: firefox-stable-mac-test-results
@@ -360,7 +360,7 @@ jobs:
       shell: bash
       env:
         PWTEST_CHANNEL: msedge
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: edge-stable-win-test-results
@@ -387,7 +387,7 @@ jobs:
         PWTEST_CHANNEL: chrome-beta
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: chrome-beta-linux-test-results
@@ -413,7 +413,7 @@ jobs:
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
       shell: bash
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: chrome-beta-win-test-results
@@ -437,7 +437,7 @@ jobs:
         PWTEST_CHANNEL: chrome-beta
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: chrome-beta-mac-test-results

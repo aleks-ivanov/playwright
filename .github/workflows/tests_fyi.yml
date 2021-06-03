@@ -36,7 +36,7 @@ jobs:
         PWTEST_VIDEO: 1
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: video-${{ matrix.browser }}-linux-test-results
@@ -67,7 +67,7 @@ jobs:
       run: npm run atest -- --shard=${{ matrix.shard }}/2
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: android-test-results
@@ -90,7 +90,7 @@ jobs:
     - run: node tests/config/checkCoverage.js electron
     - run: ./utils/upload_flakiness_dashboard.sh ./test-results/report.json
       if: always()
-    - uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2.2.3
       if: ${{ always() }}
       with:
         name: electron-linux-test-results
