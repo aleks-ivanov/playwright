@@ -9,7 +9,7 @@ updates:
     # target-branch: 'develop'
     # assignees:
     #   - assignee_one
-    # reviewers:
+    # reviewers: 
     #   - reviewer_one
 
   - package-ecosystem: 'gradle'
