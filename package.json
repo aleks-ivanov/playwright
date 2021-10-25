@@ -61,7 +61,7 @@
     "@types/progress": "^2.0.3",
     "@types/proper-lockfile": "^4.1.1",
     "@types/proxy-from-env": "^1.0.1",
-    "@types/react": "^17.0.0",
+    "@types/react": "^17.0.32",
     "@types/react-dom": "^17.0.0",
     "@types/resize-observer-browser": "^0.1.4",
     "@types/rimraf": "^3.0.0",
