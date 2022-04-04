@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3.1.0
       with:
         node-version: 12
     - uses: microsoft/playwright-github-action@v1
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3.1.0
       with:
         node-version: 12
     - uses: microsoft/playwright-github-action@v1
